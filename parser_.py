@@ -20,7 +20,7 @@ class Parser:
         if self.current_token == None:
             return None
 
-        result = self.expr() #поместим метод expr в собственный метод
+        result = self.expr()
 
         if self.current_token != None:
             self.raise_error()
