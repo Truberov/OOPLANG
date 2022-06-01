@@ -1,0 +1,3 @@
+WHITESPACE = ' \n\t'
+DIGITS = '0123456789'
+VAR = 'qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM'

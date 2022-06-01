@@ -1,5 +1,4 @@
-from nodes import *
-from values import Number
+from tokens import Number
 
 
 class Interpreter:

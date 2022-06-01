@@ -1,5 +1,4 @@
 
-
 class Node:
     def __init__(self, data):
         self.data = data
@@ -84,14 +83,14 @@ class Linkedlist:
         self.head = prev_node
 
 
-my_llist = Linkedlist()
-a = int(input('How many elements you will like to add? '))
-for i in range(a):
-    data = int(input('Enter data item: '))
-    my_llist.append(data)
-print('The linked list: ', end=' ')
-my_llist.display()
-my_llist.append(3)
-my_llist.reverse()
-print('\nThe new linked list: ', end=' ')
-my_llist.display()
+if __name__ == "__main__":
+    my_llist = Linkedlist()
+    a = int(input('How many elements you will like to add? '))
+    for i in range(a):
+        data = int(input('Enter data item: '))
+        my_llist.append(data)
+    print('The linked list: ', end=' ')
+    my_llist.display()
+    my_llist.reverse()
+    print('\nThe new linked list: ', end=' ')
+    my_llist.display()

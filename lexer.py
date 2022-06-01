@@ -1,23 +1,19 @@
-import re
 from tokens import Token, TokenType
-
-WHITESPACE = ' \n\t'  # содержит символ пробела и сивол табуляции
-DIGITS = '0123456789'
-VAR = 'qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM'
+from consts import WHITESPACE, DIGITS, VAR
 
 
 class Lexer:
-    def __init__(self, text):  # функция конструктора для приема текста
+    def __init__(self, text):
         self.text = iter(text)
         self.advance()
 
-    def advance(self):  # расширенный метод для перехода к следующему символу
+    def advance(self):
         try:
             self.current_char = next(self.text)
         except StopIteration:
             self.current_char = None
 
-    def generate_tokens(self):  # метод генерации токенов
+    def generate_tokens(self):
         while self.current_char is not None:
             if self.current_char in WHITESPACE:
                 self.advance()
@@ -72,11 +68,11 @@ class Lexer:
 
     def generate_number(self):
         decimal_point_count = 0
-        number_str = self.current_char  # начало строки и отслеживание по текущему символу
+        number_str = self.current_char
         self.advance()
 
         while self.current_char is not None and (self.current_char == '.' or self.current_char in DIGITS):
-            if self.current_char == '.':  # проверка на две точки в числе
+            if self.current_char == '.':
                 decimal_point_count += 1
                 if decimal_point_count > 1:
                     break

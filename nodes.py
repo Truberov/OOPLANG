@@ -9,7 +9,7 @@ class NumberNode:
         return f"{self.value}"
 
 @dataclass
-class AddNode: #узел добавления
+class AddNode:  # узел cуммы
     node_a: any
     node_b: any
 
@@ -18,7 +18,7 @@ class AddNode: #узел добавления
 
 
 @dataclass
-class SubtractNode:
+class SubtractNode:  # узел разности
     node_a: any
     node_b: any
 
@@ -27,7 +27,7 @@ class SubtractNode:
 
 
 @dataclass
-class MultiplyNode:
+class MultiplyNode:  # узел произведения
     node_a: any
     node_b: any
 
@@ -36,7 +36,7 @@ class MultiplyNode:
 
 
 @dataclass
-class DivideNode:
+class DivideNode:  # узел деления
     node_a: any
     node_b: any
 
